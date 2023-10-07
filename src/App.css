@@ -1,0 +1,70 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 5rem);
+  grid-template-rows: minmax(12rem, auto) repeat(5, 4rem);
+  row-gap: 0.25rem;
+  column-gap: 0.25rem;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+
+  background-color: #363636;
+  border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 0.25rem;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .prev-operand {
+  color: #6f6f6f;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.output .curr-operand {
+  color: #ffffff;
+  font-size: 2.25rem;
+  text-align: end;
+}
+
+.operation-sign {
+  background-color: #2d2d2d;
+}
+.operation-sign:hover {
+  border-color: #5221db;
+  background-color: #3f3f3f;
+}
+.operation-sign:focus,
+.operation-sign:focus-visible {
+  background-color: #3f3f3f;
+}
+
+.equal-sign {
+  background-color: #5221db;
+}
+.equal-sign:hover {
+  border-color: #5321dbad;
+  background-color: #5321dbad;
+}
+.equal-sign:focus,
+.equal-sign:focus-visible {
+  background-color: #5321dbad;
+}
